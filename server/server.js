@@ -1,11 +1,10 @@
-require('dotenv').config({ path: '/Users/shrishmishra/Desktop/parking/.env' });
+
 const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 
 const app = express();
-
 app.use(cors({
   origin: 'http://localhost:3000',
   methods: ['GET', 'POST'],
@@ -14,7 +13,7 @@ app.use(cors({
 app.use(bodyParser.json());
 
 const uri = process.env.MONGO_URI;
-mongoose.connect(uri, {
+mongoose.connect("mongodb://localhost:27017/parking", {
   useNewUrlParser: true,
   useUnifiedTopology: true
 }).then(() => console.log('MongoDb connected.'))
