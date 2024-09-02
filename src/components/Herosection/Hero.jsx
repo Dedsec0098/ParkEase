@@ -1,10 +1,11 @@
 import React, { useEffect, useRef } from 'react';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate
 import './Hero.css';
-import { Navigate } from 'react-router-dom';
 
 function Hero() {
   const vantaEffect = useRef(null);
   const scrollRef = useRef(null); // Reference for scrolling
+  const navigate = useNavigate(); // Initialize the navigate function
 
   useEffect(() => {
     const loadScripts = () => {
@@ -47,8 +48,6 @@ function Hero() {
       initializeVanta();
     });
 
-
-
     return () => {
       if (vantaEffect.current) {
         vantaEffect.current = null;
@@ -56,11 +55,9 @@ function Hero() {
     };
   }, []);
 
-
-  const handleGetStartedClick=()=>{
-    Navigate('/signin');
-
-  }
+  const handleGetStartedClick = () => {
+    navigate('/signin');
+  };
 
   const scrollToSection = () => {
     if (scrollRef.current) {
@@ -78,13 +75,13 @@ function Hero() {
         <div id="vanta-background" className="vanta-background"></div> {/* Element for Vanta.js */}
         <div className="cards" ref={scrollRef}> {/* Target section with ref */}
           <div className="card card-1">
-            <p className="tip">What We Do</p>
+            <p className="tip">What We Do...</p>
             <p className="second-text">
               Introducing our innovative web application that transforms urban parking! Effortlessly connect with available parking spaces, list and search for spots, and book on flexible schedules. Enjoy real-time notifications, secure payments, and location-based search for ultimate convenience. Our app features a rating system for trust and reliability, making parking hassles a thing of the past. Join the future of parking and experience a seamless, shared economy platform designed to connect space owners with those in need. Discover the next evolution in parking today!
             </p>
           </div>
           <div className="card card-2">
-            <p className="tip">How It Works</p>
+            <p className="tip">How It Works...</p>
             <p className="second-text">
               <ul>
                 <li><strong>Registration and Profile Creation:</strong> Users register and create profiles for listing or renting parking spaces.</li>

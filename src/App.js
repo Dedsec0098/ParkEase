@@ -5,7 +5,8 @@ import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
 import ServicesPage from './pages/ServicesPage';
 import ContactPage from './pages/ContactPage';
-import './App.css'; 
+import SigninPage from './pages/SigninPage'; // Import SigninPage component
+import './App.css';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="/about" element={<AboutPage />} />
           <Route path="/services" element={<ServicesPage />} />
           <Route path="/contact" element={<ContactPage />} />
+          <Route path="/signin" element={<SigninPage />} /> {/* Use SigninPage here */}
         </Routes>
       </main>
     </div>
