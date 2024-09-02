@@ -18,6 +18,13 @@
   text-align: center;
   padding: 10px; /* Add some padding for better spacing */
   border-radius: 5px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+}
+
+.popup-content:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+  transform: scale(1.05); /* Slightly enlarge on hover */
 }
 
 .popup-content h3 {
@@ -43,10 +50,12 @@
   font-size: 14px; /* Standard font size */
   text-decoration: none; /* Remove underline from links if any */
   margin-top: 10px; /* Margin to separate from content */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
 }
 
 .popup-content .read-more-btn:hover {
   background-color: #003d7a; /* Even darker blue on hover */
+  transform: translateY(-2px); /* Slightly lift button on hover */
 }
 
 .radar-autocomplete-input {
@@ -62,6 +71,11 @@
   outline: none;
   padding: .375rem .75rem .375rem 40px;
   text-overflow: ellipsis;
-  transition: all .3s ease;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
   width: 100%;
+}
+
+.radar-autocomplete-input:focus {
+  border-color: #007bff; /* Change border color on focus */
+  box-shadow: 0 0 4px rgba(0, 123, 255, 0.5); /* Add shadow on focus */
 }
