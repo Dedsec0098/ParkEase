@@ -5,7 +5,7 @@
   justify-content: center;
   align-items: flex-start; /* Align items to the start (left) */
   height: 90vh;
-  background-color: rgb(0, 0, 0); /* Same background color as Hero */
+  background-color: rgb(1, 0, 0); /* Same background color as Hero */
   position: relative;
   overflow: hidden;
   color: white; /* Changed to white to match Hero page */
