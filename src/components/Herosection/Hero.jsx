@@ -1,8 +1,10 @@
 import React, { useEffect, useRef } from 'react';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate hook
 import './Hero.css';
 
 function Hero() {
   const vantaEffect = useRef(null);
+  const navigate = useNavigate(); // Initialize the navigate function
 
   useEffect(() => {
     // Load external scripts if they are not already included
@@ -32,12 +34,12 @@ function Hero() {
           mouseControls: true,
           touchControls: true,
           gyroControls: false,
-          minHeight: 200.00,
-          minWidth: 200.00,
-          scale: 1.50,
-          scaleMobile: 1.00,
+          minHeight: 200.0,
+          minWidth: 200.0,
+          scale: 1.5,
+          scaleMobile: 1.0,
           color: 0xed1717,
-          size: 1.30,
+          size: 1.3,
           backgroundColor: 0xf0f10
         });
       }
@@ -55,11 +57,16 @@ function Hero() {
     };
   }, []);
 
+  // Function to handle button click and navigate to SigninPage
+  const handleGetStartedClick = () => {
+    navigate('/signin');
+  };
+
   return (
     <div id="hero-container" className="hero-container">
-      <h1 className="hero-title">ParkEase</h1>
+      <h1 className="hero-title">Parking Kidher Hai</h1>
       <p className="hero-subtitle">we provide the best spot!</p>
-      <button className="hero-button">Get Started</button>
+      <button className="hero-button" onClick={handleGetStartedClick}>Get Started</button> {/* Add onClick here */}
     </div>
   );
 }
