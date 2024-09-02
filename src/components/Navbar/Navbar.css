@@ -50,7 +50,7 @@
   width: 0;
   height: 3px;
   background-color: #c90000; /* Underline color */
-  transition: width 0.2s ease;
+  transition: width 0.4s ease;
 }
 
 /* Animate the underline on hover */
