@@ -63,11 +63,12 @@ function Hero() {
   };
 
   return (
-    <div id="hero-container" className="hero-container">
-      <h1 className="hero-title">ParkEase</h1>
-      <p className="hero-subtitle">we provide the best spot!</p>
-      <button className="hero-button">Get Started</button> {/* Add onClick here */}
-    </div>
+   <div id="hero-container" className="hero-container">
+   <h1 className="hero-title">Parking Kidher Hai</h1> {/* Keeping title from the master branch */}
+   <p className="hero-subtitle">we provide the best spot!</p> {/* Subtitle is the same in both branches */}
+   <button className="hero-button" onClick={handleGetStartedClick}>Get Started</button> {/* Keeping onClick from master */}
+</div>
+
   );
 }
 
