@@ -3,7 +3,7 @@ import Login from '../components/LoginPage/Login';
 function ContactPage() {
   return (
     <div>
-      <h1>Contact Page</h1>
+      <h1>ADD YOUR PARKING INFO</h1>
       {/* Other content of ContactPage */}
 
       {/* Include the LoginPage component here */}
