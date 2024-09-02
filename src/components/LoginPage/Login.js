@@ -21,7 +21,7 @@ function Login() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:5500/submit', formData);
+      const response = await axios.post('http://localhost:8080/submit', formData);
       alert(response.data.message);
       setFormData({ name: '', email: '' });
     }
