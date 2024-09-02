@@ -64,8 +64,8 @@ function Hero() {
 
   return (
     <div id="hero-container" className="hero-container">
-      <h1 className="hero-title">Parking Kidher Hai</h1>
-      <p className="hero-subtitle">apki zindagi yahan se shuru hoti hai</p>
+      <h1 className="hero-title">ParkEase</h1>
+      <p className="hero-subtitle">we provide the best spot!</p>
       <button className="hero-button" onClick={handleGetStartedClick}>Get Started</button> {/* Add onClick here */}
     </div>
   );
